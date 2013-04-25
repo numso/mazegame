@@ -1,0 +1,21 @@
+mixin scores(scores)
+  .scores
+    .subtitle High Scores
+    .score-box
+      if scores
+        .tab-titles-container
+          each set, i in scores
+            - var klass = (i == 5) ? 'selected' : '';
+            .tab-title(data-scoresid=i, class=klass)= i
+        .tab-titles-bar
+        each set, i in scores
+          - var stile = (i != 5) ? 'display: none' : '';
+          div(class='score-set score-set-' + i, style=stile)
+            each score, j in set
+              .score
+                .num= (j + 1) + ". "
+                .name= score.name
+                .points= score.points
+      else
+        p LOADING...
+    .menu-item.menu-back back

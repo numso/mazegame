@@ -1,0 +1,11 @@
+mixin menu()
+  .menu
+    +menu-item("New Game").menu-new
+    +menu-item("High Scores").menu-scores
+    +menu-item("Settings").menu-settings
+    +menu-item("Credits").menu-credits
+    +menu-item("Exit").menu-exit
+
+mixin menu-item(name)
+  .menu-item-container
+    .menu-item(attributes)= name

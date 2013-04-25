@@ -1,0 +1,53 @@
+.scores
+  padding: 20px
+
+  .subtitle
+    font-size: 20px
+    text-align: center
+    margin-bottom: 20px
+
+  .score-box
+    text-align: center
+    background-color: $scores-menu-item-s
+    margin-bottom: 10px
+
+    .tab-titles-container
+      background-color: $menu-color
+
+      .tab-title
+        display: inline-block
+        border: 1px solid
+        padding: 6px 20px
+        border-top-right-radius: 5px
+        border-top-left-radius: 5px
+        position: relative
+        z-index: 2
+        cursor: pointer
+        background-color: $scores-menu-item
+
+        &:hover
+          background-color: $scores-menu-item-h
+
+        &.selected
+          border-bottom: 1px solid $scores-menu-item-s
+          background-color: $scores-menu-item-s
+
+    .tab-titles-bar
+      border-bottom: 1px solid
+      position: relative
+      top: -1px
+
+    .score
+      clear: both
+      padding: 5px 10px 25px 10px
+
+      .num
+        position: absolute
+        float: left
+
+      .name
+        float: left
+        margin-left: 25px
+
+      .points
+        float: right

@@ -1,0 +1,15 @@
+mixin settings(settings)
+  .settings
+    +settings-item("Background Music", settings.music).settings-music
+    +settings-item("Sound Effects", settings.effects).settings-effects
+    +menu-item("Back").menu-back
+
+mixin settings-item(name, val)
+  - val = '' + val;
+  .settings-item-container
+    .settings-item(attributes)= name + ": "
+      span= (val == 'true' ? "ON" : "OFF")
+
+mixin menu-item(name)
+  .menu-item-container
+    .menu-item(attributes)= name

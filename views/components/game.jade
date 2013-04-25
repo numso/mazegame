@@ -1,0 +1,19 @@
+mixin game(size)
+  .game
+
+    .hud
+      span.hud-score Score: 
+        span 0
+      span.hud-time Time: 
+        span 0:00
+
+    .maze Creating your #{size} x #{size} maze. Please Wait.
+
+    .buttons
+      .top-row
+        .game-item.toggle-crumbs Show BreadCrumbs (b)
+        .game-item.toggle-hud Hide Score (y)
+      div
+        .game-item.toggle-path Show Path (p)
+        .game-item.toggle-hint Show Hint (h)
+        .game-item.go-back Back

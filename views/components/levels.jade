@@ -1,0 +1,9 @@
+include menu
+
+mixin levels()
+  .level
+    +menu-item("5x5 Puzzle")(data-num=5).menu-game
+    +menu-item("10x10 Puzzle")(data-num=10).menu-game
+    +menu-item("15x15 Puzzle")(data-num=15).menu-game
+    +menu-item("20x20 Puzzle")(data-num=20).menu-game
+    +menu-item("Back").menu-back

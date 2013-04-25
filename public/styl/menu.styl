@@ -1,0 +1,35 @@
+.menu
+  width: 100%
+  height: 100%
+  padding: 20px 0
+  text-align: center
+
+.menu-item
+  transition( all, .3s )
+  display: inline-block
+  font-size: 20px
+  background-color: $menu-item-color
+  margin: 10px 0
+  padding: 10px 10px
+  width: 100px
+  border-radius( 5px )
+
+  &:hover
+    width: 200px
+    color: white
+    margin: 0
+    padding: 20px 10px
+    cursor: pointer
+    background-color: $menu-item-color-h
+
+  &.menu-back
+    display: block
+    text-align: center
+    margin: 10px auto
+    clear: both
+    font-size: 16px
+    width: 50px
+
+    &:hover
+      width: 100px
+      margin: 0 auto

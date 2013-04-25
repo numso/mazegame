@@ -1,0 +1,85 @@
+.game
+  text-align: center
+
+  .hud
+    padding: 10px 0
+    font-size: 20px
+    height: 20px
+
+    .hud-score
+      padding-left: 50px
+      float: left
+
+    .hud-time
+      padding-right: 50px
+      float: right
+
+    &.invisible
+      opacity: 0
+
+  .maze
+    display: inline-block
+
+    .header
+      text-align: right
+
+    .footer
+      text-align: left
+
+    .maze-board
+      position: relative
+
+      .maze-block
+        display: inline-block
+        background-color: white
+        float: left
+        width: 10px
+        height: 10px
+
+        &.wall
+          background-color: black
+
+        &.hint
+          background-color: blue
+
+        &.path
+          background-color: blue
+
+      .player
+        position: absolute
+        z-index: 2
+        width: 10px
+        height: 10px
+        background-color: rgb(247, 67, 67)
+
+      &.crumbs
+        .visited
+          .breadcrumb
+            width: 4px
+            height: 4px
+            position: relative
+            background-color: black
+            top: 3px
+            left: 3px
+
+  .buttons
+    .top-row
+      .game-item
+        width: 170px
+
+    .game-item
+      transition( all, .3s )
+      display: inline-block
+      font-size: 16px
+      background-color: $menu-item-color
+      margin: 10px 10px
+      padding: 10px 10px
+      width: 120px
+      border-radius( 5px )
+
+      &:hover
+        color: white
+        margin: 0 10px
+        padding: 20px 10px
+        cursor: pointer
+        background-color: $menu-item-color-h

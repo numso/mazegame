@@ -1,0 +1,12 @@
+.header exit
+
+.maze-board
+  .player(style='left: ' + maze.x * 10 + 'px; top:' + maze.y * 10 + 'px')
+  each row, i in maze.board
+    div(style='clear:both;')
+      each cell, j in row
+        - var klass = cell.isWall ? 'wall' : ''
+        div(class=klass, data-x=i, data-y=j).maze-block
+          div(class='breadcrumb')
+
+.footer enter

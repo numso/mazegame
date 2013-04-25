@@ -1,0 +1,48 @@
+extends ../layout
+include ../components/index
+
+block content
+  .wrapper
+    .music(style='display: none;')= settings.music
+    .effects(style='display: none;')= settings.effects
+
+    audio(id='mus-background', preload, loop)
+      source(src='/sounds/background.mp3')
+    audio(id='mus-menu-click', preload)
+      source(src='/sounds/menu-click.mp3')
+    audio(id='mus-menu-hover', preload)
+      source(src='/sounds/menu-hover.mp3')
+    audio(id='mus-player-move', preload)
+      source(src='/sounds/player-move.mp3')
+    audio(id='mus-victory', preload)
+      source(src='/sounds/victory.mp3')
+
+    .title An A-Maze-ing Adventure
+    .game-area(style="width: #{width}px; height: #{height}px;")
+      if state === 'menu'
+        +menu()
+      if state === 'levels'
+        +levels()
+      if state === 'credits'
+        +credits()
+      if state === 'scores'
+        +scores(scores)
+      if state === 'settings'
+        +settings(settings)
+      if state === 'game'
+        .gameIsLoading(data-size=size, style='display: none;')
+        +game(size)
+
+append scripts
+  script
+    $(function () {
+      window.pageLoading = true;
+      window.history.replaceState('menu', '', '/');
+      var state = '#{state}';
+      if (state !== 'menu') {
+        var stateURL = '/' + state;
+        if (state == 'game')
+          stateURL += '/#{size}';
+        window.history.pushState(state, '', stateURL);
+      }
+    });

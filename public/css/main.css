@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #196c0d;
+}
+body .wrapper {
+  margin: 0 auto;
+  width: 800px;
+}
+body .wrapper .title {
+  font-size: 35px;
+  text-align: center;
+  margin: 20px 0;
+}
+body .wrapper .game-area {
+  background-color: #4fb440;
+  -webkit-box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+  margin: 0 auto;
+}
+.menu {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+.menu-item {
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  display: inline-block;
+  font-size: 20px;
+  background-color: #72eb72;
+  margin: 10px 0;
+  padding: 10px 10px;
+  width: 100px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.menu-item:hover {
+  width: 200px;
+  color: #fff;
+  margin: 0;
+  padding: 20px 10px;
+  cursor: pointer;
+  background-color: #008000;
+}
+.menu-item.menu-back {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+  clear: both;
+  font-size: 16px;
+  width: 50px;
+}
+.menu-item.menu-back:hover {
+  width: 100px;
+  margin: 0 auto;
+}
+.level {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+.level .menu-item {
+  width: 150px;
+}
+.level .menu-item:hover {
+  width: 250px;
+}
+.game {
+  text-align: center;
+}
+.game .hud {
+  padding: 10px 0;
+  font-size: 20px;
+  height: 20px;
+}
+.game .hud .hud-score {
+  padding-left: 50px;
+  float: left;
+}
+.game .hud .hud-time {
+  padding-right: 50px;
+  float: right;
+}
+.game .hud.invisible {
+  opacity: 0;
+}
+.game .maze {
+  display: inline-block;
+}
+.game .maze .header {
+  text-align: right;
+}
+.game .maze .footer {
+  text-align: left;
+}
+.game .maze .maze-board {
+  position: relative;
+}
+.game .maze .maze-board .maze-block {
+  display: inline-block;
+  background-color: #fff;
+  float: left;
+  width: 10px;
+  height: 10px;
+}
+.game .maze .maze-board .maze-block.wall {
+  background-color: #000;
+}
+.game .maze .maze-board .maze-block.hint {
+  background-color: #00f;
+}
+.game .maze .maze-board .maze-block.path {
+  background-color: #00f;
+}
+.game .maze .maze-board .player {
+  position: absolute;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  background-color: #f74343;
+}
+.game .maze .maze-board.crumbs .visited .breadcrumb {
+  width: 4px;
+  height: 4px;
+  position: relative;
+  background-color: #000;
+  top: 3px;
+  left: 3px;
+}
+.game .buttons .top-row .game-item {
+  width: 170px;
+}
+.game .buttons .game-item {
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  display: inline-block;
+  font-size: 16px;
+  background-color: #72eb72;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  width: 120px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.game .buttons .game-item:hover {
+  color: #fff;
+  margin: 0 10px;
+  padding: 20px 10px;
+  cursor: pointer;
+  background-color: #008000;
+}
+.scores {
+  padding: 20px;
+}
+.scores .subtitle {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.scores .score-box {
+  text-align: center;
+  background-color: #ddd;
+  margin-bottom: 10px;
+}
+.scores .score-box .tab-titles-container {
+  background-color: #4fb440;
+}
+.scores .score-box .tab-titles-container .tab-title {
+  display: inline-block;
+  border: 1px solid;
+  padding: 6px 20px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  background-color: #aaa;
+}
+.scores .score-box .tab-titles-container .tab-title:hover {
+  background-color: #888;
+}
+.scores .score-box .tab-titles-container .tab-title.selected {
+  border-bottom: 1px solid #ddd;
+  background-color: #ddd;
+}
+.scores .score-box .tab-titles-bar {
+  border-bottom: 1px solid;
+  position: relative;
+  top: -1px;
+}
+.scores .score-box .score {
+  clear: both;
+  padding: 5px 10px 25px 10px;
+}
+.scores .score-box .score .num {
+  position: absolute;
+  float: left;
+}
+.scores .score-box .score .name {
+  float: left;
+  margin-left: 25px;
+}
+.scores .score-box .score .points {
+  float: right;
+}
+.credits {
+  padding: 20px;
+}
+.credits .subtitle {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.credits .credits-box .info {
+  padding-bottom: 20px;
+}
+.credits .credits-box .info span {
+  float: right;
+  width: 100px;
+}
+.credits .credits-box .info span a {
+  color: #00f;
+  text-decoration: none;
+}
+.credits .credits-box .info span a:hover {
+  text-decoration: underline;
+}
+.settings {
+  padding-top: 20px;
+}
+.settings .settings-item-container {
+  text-align: center;
+}
+.settings .settings-item-container .settings-item {
+  transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  display: inline-block;
+  padding: 15px 0;
+  width: 200px;
+  background-color: #a9ffa9;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.settings .settings-item-container .settings-item:hover {
+  width: 300px;
+  background-color: #070;
+  color: #fff;
+  -webkit-box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+}
