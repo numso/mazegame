@@ -12,3 +12,5 @@ Thumbs.db
 # Node Stuff #
 ##############
 node_modules
+
+newrelic_agent.log
